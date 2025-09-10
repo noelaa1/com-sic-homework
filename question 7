@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+        System.out.print("Do you have parental consent (true/false): ");
+        boolean consent = sc.nextBoolean();
+
+        if (age >= 18 || (age >= 16 && consent)) {
+            System.out.println("You may watch the PG-18 movie.");
+        } else {
+            System.out.println("You may NOT watch the PG-18 movie.");
+        }
+    }
+}
